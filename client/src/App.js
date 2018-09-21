@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   state = {users: []}
 
   componentDidMount(){
-    fetch('users')
+    fetch('users') //este users es realmente el /users que devuelve express en localhost:3001/users
       .then(res => res.json())
       .then(users => this.setState({ users }));
   }
